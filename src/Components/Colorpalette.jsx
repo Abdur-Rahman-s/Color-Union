@@ -20,6 +20,8 @@ import NaturalPalette from './Pallet/NaturalPalette';
 import footerImage from '../assets/Footer.png';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { Helmet } from "react-helmet-async";
+import Navbar from './Navbar';
+
 
 const Hero = ({ onChangeColor, onGenerateClick }) => {
     const [color, setColor] = useState('#C25E5E');
@@ -74,10 +76,12 @@ const Hero = ({ onChangeColor, onGenerateClick }) => {
             ref={scrollRef}
             className="relative overflow-hidden text-white h-screen flex flex-col justify-center items-center text-center p-5 "
         >
+            
+            <Helmet>
+                <title>Color Union - Color Palette</title>
+            </Helmet>
 
-<Helmet>
-        <title>Color Union - Color Palette</title>
-      </Helmet>
+            <Navbar/>
 
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500 via-pink-400 to-yellow-500 opacity-80" />
 
@@ -126,49 +130,49 @@ const Footer = () => {
     return (
         <footer className="relative bg-cover bg-center bg-no-repeat h-60 mt-10" >
             <Helmet>
-        <title>Color Union - Color Palette</title>
-      </Helmet>
-            <div         className="absolute inset-0 bg-gradient-to-r from-purple-700 via-pink-500 to-red-500 bg-opacity-70 flex flex-col items-center justify-center text-white p-4"
+                <title>Color Union - Color Palette</title>
+            </Helmet>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-700 via-pink-500 to-red-500 bg-opacity-70 flex flex-col items-center justify-center text-white p-4"
             >
                 {/* Footer Image */}
-                <img 
+                <img
                     src={footerImage}
-                    alt="Footer Logo" 
+                    alt="Footer Logo"
                     className=" h-[60px] w-aito mb-4  transform hover:scale-110 transition-transform"
                 />
-                
+
                 {/* Tagline */}
                 <h2 className="text-xl font-semibold mb-2">
-                    Generate  Creative Colors ❤️ 
+                    Generate  Creative Colors ❤️
                 </h2>
-                
+
                 {/* Links */}
                 <div className="flex gap-6 text-xl mb-4">
-                    <a 
-                        href="#" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href="#"
+                        rel="noopener noreferrer"
                         className="hover:text-blue-400 transition-colors"
                         title="GitHub"
                     >
                         <FaGithub />
                     </a>
-                    <a 
-                        href="#" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href="#"
+                        rel="noopener noreferrer"
                         className="hover:text-blue-400 transition-colors"
                         title="LinkedIn"
                     >
                         <FaLinkedin />
                     </a>
-                    <a 
-                        href="#" 
+                    <a
+                        href="#"
                         className="hover:text-blue-400 transition-colors"
                         title="Contact via Email"
                     >
                         <FaEnvelope />
                     </a>
                 </div>
-                
+
                 {/* Copyright */}
                 <p className="text-sm text-gray-300">
                     © 2024 Color Palette Generator. All rights reserved.
@@ -205,7 +209,7 @@ export const Colorpalette = () => {
             <TwistedSpotGenerate key="twisted" baseColor={baseColor} />,
             <MonochromaticGenerator key="monochromatic" baseColor={baseColor} />,
             <Complementary key="complementary" baseColor={baseColor} />,
-            <Footer/>
+            <Footer />
         ];
         setGeneratedPalettes(newPalettes);
 

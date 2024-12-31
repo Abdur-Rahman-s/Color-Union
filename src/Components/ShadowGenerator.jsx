@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
+import Navbar from "./Navbar";
 
 export const ShadowGenerator = () => {
     const [boxProperties, setBoxProperties] = useState({
@@ -47,6 +48,8 @@ box-shadow: ${boxShadow};`;
 <Helmet>
         <title>Color Union - Shadow</title>
       </Helmet>
+
+            <Navbar/>
             <h1 className="text-4xl font-extrabold text-center mt-14 text-white mb-6 drop-shadow-lg">Shadow Generator</h1>
             
             {/* Interactive Section */}

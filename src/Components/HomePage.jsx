@@ -1,19 +1,24 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // React Router for navigation
 import { Helmet } from "react-helmet-async";
+import Navbar from './Navbar';
+
 
 const HomePage = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="h-auto sm:h-screen w-full  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white flex flex-col justify-center items-center relative">
-
+        <div className="h-auto sm:h-screen w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white flex flex-col justify-center items-center relative">
+            
             <Helmet>
                 <title>Color Union - Home</title>
             </Helmet>
 
+            {/* Navbar */}
+            <Navbar/>
+
             {/* Main Content */}
-            <div className="text-center px-5">
+            <div className="mt-16 text-center px-5"> {/* Adjusted margin-top */}
                 <h2 className="text-5xl font-bold mb-5">
                     Design Your Palette, Pick Your Gradient
                 </h2>
@@ -59,7 +64,7 @@ const HomePage = () => {
             </div>
 
             {/* Footer */}
-            <div className="  md:absolute bottom-5 text-sm text-white/80">
+            <div className="md:absolute bottom-5 text-sm text-white/80">
                 &copy; 2024 Color Universe. All rights reserved.
             </div>
         </div>

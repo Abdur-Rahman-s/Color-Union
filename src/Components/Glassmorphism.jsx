@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Icon from '../assets/Icon.png';
 import { Helmet } from "react-helmet-async";
+import Navbar from './Navbar';
 
 export const Glassmorphism = () => {
   const [transparency, setTransparency] = useState(0.2);
@@ -47,9 +48,12 @@ export const Glassmorphism = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br overflow-hidden  from-[#a8c0ff] via-[#3f7cac] to-[#ffe3e3]  w-full flex flex-col items-center justify-center px-6 py-8">
 
-<Helmet>
+      <Helmet>
         <title>Color Union - Glassmorphism</title>
       </Helmet>
+
+      <Navbar/>
+
       <div className="lg:w-[80%] flex-col space-y-12  lg:h-[80%] w-full h-full flex items-center justify-center p-4 sm:p-6 rounded-lg bg-opacity-60 backdrop-blur-lg relative">
         <div className="absolute -top-10 left-4 lg:left-16 w-8 h-8 lg:w-20 lg:h-10 bg-[#8CA5C1] bg-opacity-60 rounded-full blur-lg animate-float"></div>
         <div className="absolute -bottom-12 right-6 lg:right-20 w-12 h-12 lg:w-16 lg:h-16 bg-[#a2d804] bg-opacity-40 rounded-full blur-xl animate-float delay-200"></div>

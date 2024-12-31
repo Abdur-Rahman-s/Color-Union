@@ -2,6 +2,7 @@ import { React } from 'react';
 import { RandomColor } from './RandomColor';
 import ColorPicker from './ColorPicker';
 import { Helmet } from "react-helmet-async";
+import Navbar from './Navbar';
 
 export const Picker = () => {
     return (
@@ -14,6 +15,8 @@ export const Picker = () => {
             <Helmet>
         <title>Color Union - Picker</title>
       </Helmet>
+
+      <Navbar/>
             <div
                 className="flex mt-16 items-center justify-center p-6"
                 style={{

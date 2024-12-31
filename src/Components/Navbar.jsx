@@ -11,7 +11,11 @@ const Navbar = () => {
                 <div className="flex justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <img src={logo} alt="Logo" className='h-[50px] ' />
+                        <NavLink
+                            to='/'
+                        >
+                            <img src={logo} alt="Logo" className='h-[50px] ' />
+                        </NavLink>
                     </div>
 
                     {/* Menu for Large Screens */}

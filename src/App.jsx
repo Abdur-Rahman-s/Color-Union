@@ -13,10 +13,6 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        {/* Navbar Component */}
-        <Navbar />
-
-        {/* Define Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Colorpalette" element={<Colorpalette />} />

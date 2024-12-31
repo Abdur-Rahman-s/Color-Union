@@ -12,6 +12,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { CiSquarePlus } from "react-icons/ci";
 import 'rc-slider/assets/index.css';
 import { Helmet } from "react-helmet-async";
+import Navbar from "./Navbar";
 
 const initialState = "to left";
 
@@ -170,8 +171,11 @@ export const GradientGenerator = () => {
                 style={{ background: gradientColor }}
             >
                 <Helmet>
-                        <title>Color Union - Gradient</title>
-                      </Helmet>
+                    <title>Color Union - Gradient</title>
+                </Helmet>
+                
+                <Navbar/>
+
                 <div className="w-full max-w-[600px] p-4 space-y-4 bg-white/50 backdrop-blur-sm rounded-lg shadow-lg">
                     <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
                         {/* Direction Buttons */}
