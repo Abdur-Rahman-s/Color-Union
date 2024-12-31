@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.color-containers {
+  @apply h-[240px] w-full border rounded-xl border-gray-300 shadow-md transition-all duration-500;
+}
+
+.container {
+  @apply flex flex-col  shadow-lg w-[350px] p-6 rounded-2xl;
+}
+
+/* Tailwind custom class */
+.GradientTypeButton {
+  @apply h-8 w-8 flex  text-white font-bold  items-center justify-center text-[18px] hover:rounded-full hover:border-2 hover:border-white;
+}
+
+/* --------- DISPLAY --  */
+.customBorder {
+  @apply border-t flex flex-col gap-6 
+  
+}
+
+.Display-container {
+  @apply flex justify-center   flex-col items-center mt-16 gap-6
+}
+
+.Display-Responsive {
+  @apply flex overflow-hidden justify-center flex-col sm:flex sm:flex-row  gap-2
+}
+
+
+.Display-text {
+  @apply text-xl mt-16 text-center  font-bold
+}
+
+/* --------- DISPLAY END --  */
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+label {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*------ Style 1 ------*/
+#style1 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#style1::-webkit-color-swatch {
+  border-radius: 15px;
+  border: none;
+}
+#style1::-moz-color-swatch {
+  border-radius: 15px;
+  border: none;
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: bisque;
+  height: 100%;
+  border-radius: 20px;
+}
+.radius-picker {
+  display: inline-block;
+  margin: 0;
+  width: 8em;
+  height: 8em;
+  background: #f2f3f7;
+  background: -moz-linear-gradient(top,  #f2f3f7 0%, #e8e9ee 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f3f7), color-stop(100%,#e8e9ee));
+  background: -webkit-linear-gradient(top,  #f2f3f7 0%,#e8e9ee 100%);
+  background: -o-linear-gradient(top,  #f2f3f7 0%,#e8e9ee 100%);
+  background: -ms-linear-gradient(top,  #f2f3f7 0%,#e8e9ee 100%);
+  background: linear-gradient(to bottom,  #f2f3f7 0%,#e8e9ee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', endColorstr='#e8e9ee',GradientType=0 );
+  border-radius: 50%;
+  position: relative;
+}
+
+.radius-picker__handle {
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  margin: -0.65em 0 0 -0.65em;
+  border-radius: 50%;
+  background: #e86d4e;
+  border: 1px solid #c75437;
+  position: absolute;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgba(0,0,0, .51), 0 1px 0 rgba(255,255,255, .25) inset;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  cursor: pointer;
+  transform-origin: 50% 50%; /* Ensure rotation happens from the center */
+  transition: transform 0.1s ease; /* Smooth rotation */
+}
+
+.radius-picker__value {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  font-weight: bold;
+  margin-top: -0.7em;
+  margin-right: -0.5em;
+  font-size: 1.25em;
+  color: #808a96;
+}
+
+.radius-picker__value:after {
+  font-weight: normal;
+  content: "\00b0"; /* Degree symbol */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.color-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+
+/* Customize the SketchPicker */
+.custom-sketch-picker {
+  background: transparent !important; /* Makes the background transparent */
+  padding: 0 !important; /* Removes padding */
+  border-radius: 8px !important; /* Add custom border radius */
+  box-shadow: none !important; /* Removes default shadow */
+}
+
+/* Customize internal parts of the SketchPicker */
+.custom-sketch-picker .flexbox-fix {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.custom-sketch-picker input {
+  border: none !important;
+  background-color: transparent !important;
+  border-radius: 4px !important;
+}
+
+.custom-sketch-picker .saturation {
+  border-radius: 15px !important;
+}
+
+/* Adjust the alpha slider */
+.custom-sketch-picker .alpha {
+  border-radius: 15px !important;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure higher specificity */
+input[type="color"] {
+  border: none;
+  outline: none; /* Removes any focus outline */
+}
+
+/* Optional: Add focus style if needed */
+input[type="color"]:focus {
+  outline: none;
+}
+
+/* Hide the alpha slider */
+.w-color-alpha {
+  display: none !important;
+}
+
+
+/* Tailwind for smooth transitions */
+.transition-colors {
+  transition: background-color 0.3s ease;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:shadow-2xl:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
